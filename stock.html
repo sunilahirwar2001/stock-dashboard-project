@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Stock Market Dashboard</title> 
+        <link href="./stock.css" rel="stylesheet">
+        <script src="./stock.js"></script>
+        
+<script src="https://kit.fontawesome.com/d9b4c31318.js" crossorigin="anonymous"></script>
+    </head>
+    <body >
+     <div class="container">
+       <div class="header"><i id="up-header" class='fas fa-arrow-up'></i> STOCK MARKET DASHBOARD <i id="down-header" class='fas fa-arrow-down'></i></div>
+       <div class="searchBox">
+          <input  id="inputSearchBox" type="text" placeholder="Search for Symbol ...."  />
+          <button id="buttonSearchBox" type="submit" onclick="submitSearchFunc()"><i id="searchIcon" class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+        <button id="INTRADAY" class="btn-time-slots" onclick="ClickTimeSeries(event, 'INTRADAY')">INTRADAY</button>
+        <button id="DAILY" class="btn-time-slots" onclick="ClickTimeSeries(event, 'DAILY')">DAILY</button>
+        <button id="WEEKLY" class="btn-time-slots" onclick="ClickTimeSeries(event, 'WEEKLY')">WEEKLY</button>
+        <button id="MONTHLY" class="btn-time-slots" onclick="ClickTimeSeries(event, 'MONTHLY')">MONTHLY</button>
+        </div>
+
+        <div class="watchListBox"> 
+            <div class="IdWatchListTxt">
+                <p class="txtWatchList" >YOUR WATCHLIST</p>
+            </div>
+            <div class="stockArea">
+                <p id="stock1" class="BtnWatchList"> <span class="symbolTxt">AMZN</span> <span class="rateWatchListBox">123.45</span><button class="stockBtnArea">INTRADAY</button><button class="closeIconeBtn"><i class="fa fa-times" aria-hidden="true"></i></button></p>
+                <p id="stock2" class="BtnWatchList"> <span class="symbolTxt">MSFT</span> <span class="rateWatchListBox">67.89</span><button class="stockBtnArea">DAILY</button><button class="closeIconeBtn" ><i class="fa fa-times" aria-hidden="true"></i></button></p>
+                <p id="stock3" class="BtnWatchList"> <span class="symbolTxt">IBM</span> <span class="rateWatchListBox">56.34</span><button class="stockBtnArea">MONTHLY</button><button class="closeIconeBtn"><i class="fa fa-times" aria-hidden="true"></i></button></p>
+            </div>
+        </div>
+     </div>
+
+
+    </body>
+</html>
